@@ -82,3 +82,12 @@ if result:
         os.mkdir("temp")
     except:
         pass
+
+
+
+with st.sidebar:
+  st.subheader("Decidete de una vez 🛒")
+  mod_radio = st.radio(
+    "Escoge una marca", 
+    ("Chevrolet", "Renault","Ford")
+  )
