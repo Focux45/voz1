@@ -33,7 +33,7 @@ st.subheader("CONTROL POR VOZ")
 
 image = Image.open('melo.png')
 
-st.image(image, width=200)
+st.image(image, width= 400)
 
 
 
