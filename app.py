@@ -112,6 +112,9 @@ with col2:
 
 
 
+st.write("Modelos de carros que han usado nuestro servicio")
+
+
 image_paths = ['bmw.jpg', 'chevro.jpeg', 'ford.png', 'mazda.jpg', 'renault.jpg']
 images = [Image.open(img_path) for img_path in image_paths]
 
