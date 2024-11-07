@@ -112,7 +112,7 @@ with col2:
 
 
 
-image_paths = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg']
+image_paths = ['bmw.jpg', 'chevro.jpeg', 'ford.png', 'mazda.jpg', 'renault.jpg', 'melo.png']
 images = [Image.open(img_path) for img_path in image_paths]
 
 # Establecer el índice inicial
