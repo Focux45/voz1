@@ -82,3 +82,24 @@ if result:
         os.mkdir("temp")
     except:
         pass
+
+
+
+col1, col2 = st.columns(2)
+
+with col1:
+  st.subheader("Ayuda")
+  st.write("Se te dificulta reversar?")
+  resp = st.checkbox("Preguntele a chatgpt")
+  if resp:
+    st.write("Preste atención a la clase")
+
+with col2:
+  st.subheader("Carro")
+  modo = st.radio("Tu carro es mecanico o automatico", ("Chevrolet", "Renault","Ford"))
+  if modo == "Chevrolet":
+    st.write("Es una marca interesante")
+  if modo == "Renault":
+    st.write("Es una marca francesa")
+  if modo == "Ford":
+    st.write("La marca mas vendida en los estados unidos")
