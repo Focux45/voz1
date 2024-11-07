@@ -28,8 +28,8 @@ client1.on_message = on_message
 
 
 
-st.title("Interfaces Multimodales")
-st.subheader("CONTROL POR VOZ")
+st.title("🏎️🏎️ DETECTRON 2.0 🏎️🏎️")
+st.subheader("Control de voz del sensor")
 
 image = Image.open('melo.png')
 
@@ -40,7 +40,7 @@ st.image(image, width= 400)
 
 st.write("Toca el Botón y habla ")
 
-stt_button = Button(label=" Inicio ", width=200)
+stt_button = Button(label=" Inicio ", width=400)
 
 stt_button.js_on_event("button_click", CustomJS(code="""
     var recognition = new webkitSpeechRecognition();
