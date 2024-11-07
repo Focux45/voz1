@@ -103,10 +103,9 @@ with col1:
 
 with col2:
   st.subheader("Carro")
-  modo = st.radio("Tu carro es mecanico o automatico", ("Chevrolet", "Renault","Ford"))
-  if modo == "Chevrolet":
-    st.write("Es una marca interesante")
-  if modo == "Renault":
-    st.write("Es una marca francesa")
-  if modo == "Ford":
-    st.write("La marca mas vendida en los estados unidos")
+  modo = st.radio("Tu carro es mecanico o automatico", ("automatico", "mecanico"))
+  if modo == "automatico":
+    st.write("Recibido")
+  if modo == "mecanico":
+    st.write("Recibido")
+
