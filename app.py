@@ -20,6 +20,36 @@ def on_message(client, userdata, message):
     time.sleep(2)
     message_received=str(message.payload.decode("utf-8"))
     st.write(message_received)
+    
+def get_mqtt_message():
+    """Función simple para recibir un mensaje MQTT"""
+    mensaje_recibido = None
+    
+    def on_message(client, userdata, message):
+        nonlocal mensaje_recibido
+        mensaje_recibido = message.payload.decode()
+    
+    # Crear y configurar cliente MQTT
+    client = mqtt.Client()
+    client.on_message = on_message
+    
+    try:
+        # Conectar y suscribir
+        client.connect("broker.mqttdashboard.com", 1883, 60)
+        client.subscribe("app_")
+        
+        # Esperar mensaje
+        client.loop_start()
+        time.sleep(3)  # Espera 3 segundos
+        client.loop_stop()
+        
+        return mensaje_recibido
+        
+    except Exception as e:
+        return f"Error: {e}"
+
+
+
 
 broker="broker.mqttdashboard.com"
 port=1883
@@ -83,7 +113,15 @@ if result:
     except:
         pass
 
+st.title("Receptor MQTT")
 
+if st.button("Recibir"):
+    with st.spinner('Esperando mensaje...'):
+        mensaje = get_mqtt_message()
+        if mensaje:
+            st.write("Mensaje recibido:", mensaje)
+        else:
+            st.write("No se recibió mensaje")
 
 with st.sidebar:
   st.subheader("selecciona tu marca de carro")
