@@ -38,7 +38,7 @@ st.image(image, width= 400)
 
 
 
-st.write("Toca el Botón y habla ")
+st.write("Toca el Botón para encender el sensor de reversa ")
 
 stt_button = Button(label=" Inicio ", width=200)
 
@@ -108,4 +108,35 @@ with col2:
     st.write("Recibido")
   if modo == "mecanico":
     st.write("Recibido")
+
+
+
+
+image_paths = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg']
+images = [Image.open(img_path) for img_path in image_paths]
+
+# Establecer el índice inicial
+if 'index' not in st.session_state:
+    st.session_state.index = 0
+
+# Funciones para avanzar y retroceder
+def next_image():
+    if st.session_state.index < len(images) - 1:
+        st.session_state.index += 1
+
+def prev_image():
+    if st.session_state.index > 0:
+        st.session_state.index -= 1
+
+# Botones para navegar entre las imágenes
+col1, col2, col3 = st.columns([1, 6, 1])
+with col1:
+    if st.button("Anterior"):
+        prev_image()
+with col2:
+    st.image(images[st.session_state.index], caption=f"Imagen {st.session_state.index + 1}", use_column_width=True)
+with col3:
+    if st.button("Siguiente"):
+        next_image()
+
 
