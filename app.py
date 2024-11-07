@@ -7,6 +7,7 @@ from PIL import Image
 import time
 import glob
 import paho.mqtt.client as paho
+import paho.mqtt.client as mqtt
 import json
 from gtts import gTTS
 from googletrans import Translator
