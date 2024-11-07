@@ -97,9 +97,9 @@ col1, col2 = st.columns(2)
 with col1:
   st.subheader("Ayuda")
   st.write("Se te dificulta reversar?")
-  resp = st.checkbox("Preguntele a chatgpt")
+  resp = st.checkbox("Si, se me dificulta")
   if resp:
-    st.write("Preste atención a la clase")
+    st.write("Nosotros te ayudamos")
 
 with col2:
   st.subheader("Transmisión del vehiculo")
