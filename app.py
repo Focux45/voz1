@@ -102,7 +102,7 @@ with col1:
     st.write("Preste atención a la clase")
 
 with col2:
-  st.subheader("Carro")
+  st.subheader("Transmisión del vehiculo")
   modo = st.radio("Tu carro es mecanico o automatico", ("automatico", "mecanico"))
   if modo == "automatico":
     st.write("Recibido")
