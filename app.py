@@ -86,8 +86,8 @@ if result:
 
 
 with st.sidebar:
-  st.subheader("Decidete de una vez 🛒")
+  st.subheader("selecciona tu marca de carro")
   mod_radio = st.radio(
     "Escoge una marca", 
-    ("Chevrolet", "Renault","Ford")
+    ("Chevrolet", "Renault","Ford","Mazda","Kia", "Opel", "BMW", "Mitsubishi", "MINI")
   )
