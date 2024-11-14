@@ -73,28 +73,6 @@ st.write("Toca el Botón para encender el sensor de reversa ")
 
 st.link_button("Ir al control de voz", "https://crutrv5uanw72zk6druncx.streamlit.app/")
 
-result = streamlit_bokeh_events(
-    stt_button,
-    events="GET_TEXT",
-    key="listen",
-    refresh_on_update=False,
-    override_height=75,
-    debounce_time=0)
-
-if result:
-    if "GET_TEXT" in result:
-        st.write(result.get("GET_TEXT"))
-        client1.on_publish = on_publish                            
-        client1.connect(broker,port)  
-        message =json.dumps({"Act1":result.get("GET_TEXT").strip()})
-        ret= client1.publish("control_juan", message)
-
-    
-    try:
-        os.mkdir("temp")
-    except:
-        pass
-
 st.title("Receptor MQTT")
 
 if st.button("Recibir"):
