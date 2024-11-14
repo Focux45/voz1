@@ -28,8 +28,8 @@ client1.on_message = on_message
 
 
 
-st.title("Interfaces Multimodales")
-st.subheader("CONTROL POR VOZ")
+st.title("Microfono detectron")
+st.subheader("Activa el mega sensor")
 
 image = Image.open('voice_ctrl.jpg')
 
