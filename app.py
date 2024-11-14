@@ -58,6 +58,8 @@ stt_button.js_on_event("button_click", CustomJS(code="""
     recognition.start();
     """))
 
+
+
 result = streamlit_bokeh_events(
     stt_button,
     events="GET_TEXT",
@@ -79,6 +81,8 @@ if result:
         os.mkdir("temp")
     except:
         pass
+
+st.link_button("Volver a detectron", "https://detectronfinal.streamlit.app/")
 
 col1, col2 = st.columns(2)
 
