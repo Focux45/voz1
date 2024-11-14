@@ -71,7 +71,7 @@ st.image(image, width= 400)
 
 st.write("Toca el Botón para encender el sensor de reversa ")
 
-#stt_button = Button(label=" Inicio ", width=200)
+stt_button = Button(label=" Inicio ", width=200)
 
 stt_button.js_on_event("button_click", CustomJS(code="""
     var recognition = new webkitSpeechRecognition();
