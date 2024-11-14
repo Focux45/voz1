@@ -92,7 +92,7 @@ stt_button.js_on_event("button_click", CustomJS(code="""
     recognition.start();
     """))
 
-st.link_button("Go to gallery", "https://crutrv5uanw72zk6druncx.streamlit.app/")
+st.link_button("Ir al control de voz", "https://crutrv5uanw72zk6druncx.streamlit.app/")
 
 result = streamlit_bokeh_events(
     stt_button,
