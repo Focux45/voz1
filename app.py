@@ -36,7 +36,7 @@ def get_mqtt_message():
     
     try:
         # Conectar y suscribir
-        client.connect("broker.mqttdashboard.com", 1883, 60)
+        client.connect("157.230.214.127", 1883, 60)
         client.subscribe("app_")
         
         # Esperar mensaje
