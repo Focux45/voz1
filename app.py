@@ -261,7 +261,7 @@ st.markdown(
 )
 
 # Obtener la ruta de la imagen
-current_dir=os.path.dirname(os.path.abspath(_file_))
+current_dir=os.path.dirname(os.path.abspath(__file__))
 image_path=os.path.join(current_dir,"vinoculares.png")
 
 # Crear columnas para dividir la imagen y el texto
