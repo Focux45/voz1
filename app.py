@@ -70,8 +70,10 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-        body {
-           background: linear-gradient(to bottom, #ffffff, #0000FF);
+        .css-fg4pbf {
+            background: linear-gradient(to bottom, #ffffff, #0000FF); /* Gradiente blanco a azul */
+            background-attachment: fixed; /* Fondo fijo */
+            padding: 20px; /* Añade algo de padding para que sea más visible */
         }
         .main-title {
             font-size: 36px;
@@ -166,7 +168,7 @@ st.markdown(
 
 # Mostrar el contenedor de la imagen
 image = Image.open('melo.png')  # Asegúrate de que 'melo.png' esté en el directorio
-st.image(image, width=400, use_column_width=False, caption="")
+st.image(image, width=400, border=3,use_column_width=False, caption="")
 st.markdown(
     """
     <div class="image-container">
