@@ -115,15 +115,22 @@ st.markdown(
             margin-top: 40px;
         }
             .stButton > button {
-        background-color: blue;
-        color: white;
-        border: None;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #000000; /* Letras negras */
+            background-color: #ffffff; /* Fondo blanco */
+            border: 2px solid #000000; /* Borde negro */
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
     }
     .stButton > button:hover {
-        background-color: darkblue;
+            background-color: #0000FF; /* Azul */
+            color: #ffffff; /* Letras blancas */
     }
     </style>
     """,
