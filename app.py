@@ -105,11 +105,15 @@ st.markdown(
             color: #ffffff; /* Letras blancas */
         }
             .mqtt-title {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            color: #000000; /* Negro */
-            margin-top: 40px;
+            font-size: 24px; 
+            font-weight: bold; 
+            color: #333333; /* Texto oscuro */
+            text-align: center; /* Centrar el texto */
+        }
+            .mqtt-description {
+            font-size: 16px;
+            color: #666666; /* Texto gris */
+            text-align: center; /* Centrar el texto */
         }
             .stButton > button {
             display: inline-block;
@@ -202,6 +206,7 @@ st.markdown(
             .tittle-model {
                 background-color: #ababab; 
                 padding: 20px;
+                font-size: 18px;
                 border-radius: 10px;
                 margin-bottom: 20px;
                 width: 100vw; /* Asegura que el ancho sea igual al ancho total de la ventana */
@@ -255,8 +260,26 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# Obtener la ruta de la imagen
+current_dir=os.path.dirname(os.path.abspath(_file_))
+image_path=os.path.join(current_dir,"vinoculares.png")
+
+# Crear columnas para dividir la imagen y el texto
+col1, col2 = st.columns([1, 2])  # La imagen ocupa 1/3 del ancho, el texto 2/3
+
+# Imagen en la primera columna
+with col1:
+    st.image(image_path)  # Muestra la imagen
+
+# Texto en la segunda columna
+with col2:
+    st.markdown('<h2 class="mqtt-title">Receptor MQTT</h2>', unsafe_allow_html=True)
+    st.markdown(
+        '<p class="mqtt-description">Este sistema recibe mensajes a través del protocolo MQTT, permitiendo comunicación rápida y segura para dispositivos IoT.</p>',
+        unsafe_allow_html=True,
+    )
 # Título para MQTT
-st.markdown('<h2 class="mqtt-title">Receptor MQTT</h2>', unsafe_allow_html=True)
+#st.markdown('<h2 class="mqtt-title">Receptor MQTT</h2>', unsafe_allow_html=True)
 
 if st.button("Recibir"):
     with st.spinner('Esperando mensaje...'):
