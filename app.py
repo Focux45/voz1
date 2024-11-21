@@ -164,8 +164,8 @@ st.markdown(
 #st.markdown('<h1 class="main-title">🏎🏎 DETECTRON 2.0 🏎🏎</h1>', unsafe_allow_html=True)
 #st.markdown('<p class="subheader">Control de voz del sensor</p>', unsafe_allow_html=True)
 
-# Mostrar imagen con contenedor estilizado
-image = Image.open("melo.png")  # Asegúrate de que este archivo esté en el directorio
+# Mostrar el contenedor de la imagen
+image = Image.open('melo.png')  # Asegúrate de que 'melo.png' esté en el directorio
 st.markdown(
     """
     <div class="image-container">
@@ -174,7 +174,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
 # Mostrar imagen
 #image = Image.open('melo.png')  # Asegúrate de que el archivo 'melo.png' esté en el directorio
 #st.image(image, width=400, use_column_width=False, caption="")
