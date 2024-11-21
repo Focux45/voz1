@@ -34,7 +34,7 @@ image = Image.open("activar.png")
 st.image(image, width=400)
 st.subheader("Con el comando Open. enciendes el sistema, Close. apaga el sistema")
 
-st.write("Toca el Botón y habla ")
+st.write("Toca el Botón y habla")
 
 stt_button = Button(label=" Inicio ", width=200)
 
