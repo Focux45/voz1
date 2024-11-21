@@ -262,7 +262,7 @@ st.markdown(
 st.markdown(
     """
     <div class="center">
-        <p>Toca el botón para encender el sensor de reversa</p>
+        <p>Toca el botón para ir al control de voz del sensor</p>
         <a href="https://crutrv5uanw72zk6druncx.streamlit.app/" class="custom-button">Ir al control de voz</a>
     </div>
     """,
@@ -300,7 +300,7 @@ with col2:
 # Título para MQTT
 #st.markdown('<h2 class="mqtt-title">Receptor MQTT</h2>', unsafe_allow_html=True)
 
-if st.button("Recibir"):
+if st.button("Recibir dato de reversa"):
     with st.spinner('Esperando mensaje...'):
         mensaje = get_mqtt_message()
         if mensaje:
