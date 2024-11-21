@@ -71,7 +71,7 @@ st.markdown(
     """
     <style>
         body {
-            background-color: #ffffff; /* Fondo blanco */
+           background: linear-gradient(to bottom, #ffffff, #0000FF);
         }
         .main-title {
             font-size: 36px;
