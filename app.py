@@ -351,14 +351,14 @@ def prev_image():
 col1, col2, col3 = st.columns([1, 5, 1])
 
 with col1:
-    if st.button("<"):
+    if st.button("prev"):
         prev_image()
 
 with col2:
     st.image(images[st.session_state.index], caption=f"Imagen {st.session_state.index + 1}", use_column_width=True)
 
 with col3:
-    if st.button(">"):
+    if st.button("next"):
         next_image()
 
 # Mostrar el índice actual en el slider
