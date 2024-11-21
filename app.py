@@ -70,28 +70,23 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-        .css-fg4pbf {
-            background: linear-gradient(to bottom, #ffffff, #0000FF); /* Gradiente blanco a azul */
-            background-attachment: fixed; /* Fondo fijo */
-            padding: 20px; /* Añade algo de padding para que sea más visible */
-        }
-        .main-title {
+            .main-title {
             font-size: 36px;
             font-weight: bold;
             text-align: center;
             color: #000000; /* Negro */
             margin-bottom: 10px;
         }
-        .subheader {
+            .subheader {
             font-size: 18px;
             text-align: center;
             color: #000000; /* Negro */
             margin-bottom: 30px;
         }
-        .center {
+            .center {
             text-align: center;
         }
-        .custom-button {
+            .custom-button {
             display: inline-block;
             padding: 10px 20px;
             font-size: 18px;
@@ -105,18 +100,18 @@ st.markdown(
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s; /* Transición suave */
         }
-        .custom-button:hover {
+            .custom-button:hover {
             background-color: #cacdf8; /* Azul */
             color: #ffffff; /* Letras blancas */
         }
-        .mqtt-title {
+            .mqtt-title {
             font-size: 24px;
             font-weight: bold;
             text-align: center;
             color: #000000; /* Negro */
             margin-top: 40px;
         }
-            .stButton {
+            .stButton > button {
             display: inline-block;
             padding: 10px 20px;
             font-size: 18px;
@@ -130,79 +125,85 @@ st.markdown(
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
         }
-            .stButton:hover {
+            .stButton > button:hover {
             background-color: #cacdf8; /* Azul */
             color: #ffffff; /* Letras blancas */
         }
             /* Contenedor para el título */
             .title-container {
-            background-color: #cacdf8; /* Azul claro */
+                background-color: #ababab; 
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                width: 100vw; /* Asegura que el ancho sea igual al ancho total de la ventana */
+                margin-left: -50vw; /* Centra el contenedor eliminando el margen del layout de Streamlit */
+                margin-right: -50vw; /* Ajusta el margen derecho */
+                position: relative; /* Permite ajustar el contenedor en relación al layout */
+                left: 50%; /* Centra el contenedor */
+                box-sizing: border-box; /* Incluye el padding dentro del ancho total */
+        }
+            .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #e0f7fa; /* Azul claro */
             padding: 20px;
             border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background-color: #e0f7fa; /* Azul claro */
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    }
-
-    .image-container {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .image-container img {
-        max-width: 100%;
-        border-radius: 8px;
-    }
-    .text-container {
-        flex: 2;
-        padding-left: 20px;
-    }
-    .text-container h2 {
-        font-size: 24px;
-        font-weight: bold;
-        color: #333333; /* Texto oscuro */
-        margin-bottom: 10px;
-    }
-    .text-container p {
-        font-size: 16px;
-        color: #666666; /* Texto gris */
-        margin-bottom: 20px;
-    }
-     .button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: #000000; /* Texto negro */
-        background-color: transparent;
-        border: 2px solid #000000; /* Borde negro */
-        border-radius: 5px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-    .button:hover {
-        background-color: #cacdf8; /* Fondo azul claro */
-        color: #ffffff; /* Texto blanco */
-    }
-    .tittle-model {
-        background-color: #ababab; 
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        width: 100vw; /* Asegura que el ancho sea igual al ancho total de la ventana */
-        margin-left: -50vw; /* Centra el contenedor eliminando el margen del layout de Streamlit */
-        margin-right: -50vw; /* Ajusta el margen derecho */
-        position: relative; /* Permite ajustar el contenedor en relación al layout */
-        left: 50%; /* Centra el contenedor */
-        box-sizing: border-box; /* Incluye el padding dentro del ancho total */
-    }
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        }
+        
+            .image-container {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .image-container img {
+                max-width: 100%;
+                border-radius: 8px;
+            }
+            .text-container {
+                flex: 2;
+                padding-left: 20px;
+            }
+            .text-container h2 {
+                font-size: 24px;
+                font-weight: bold;
+                color: #333333; /* Texto oscuro */
+                margin-bottom: 10px;
+            }
+            .text-container p {
+                font-size: 16px;
+                color: #666666; /* Texto gris */
+                margin-bottom: 20px;
+            }
+             .button {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: #000000; /* Texto negro */
+                background-color: transparent;
+                border: 2px solid #000000; /* Borde negro */
+                border-radius: 5px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+            .button:hover {
+                background-color: #cacdf8; /* Fondo azul claro */
+                color: #ffffff; /* Texto blanco */
+            }
+            .tittle-model {
+                background-color: #ababab; 
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                width: 100vw; /* Asegura que el ancho sea igual al ancho total de la ventana */
+                margin-left: -50vw; /* Centra el contenedor eliminando el margen del layout de Streamlit */
+                margin-right: -50vw; /* Ajusta el margen derecho */
+                position: relative; /* Permite ajustar el contenedor en relación al layout */
+                left: 50%; /* Centra el contenedor */
+                box-sizing: border-box; /* Incluye el padding dentro del ancho total */
+            }
     </style>
     """,
     unsafe_allow_html=True,
