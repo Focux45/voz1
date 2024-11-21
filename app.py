@@ -141,13 +141,56 @@ st.markdown(
             border-radius: 10px;
             margin-bottom: 20px;
         }
-        .image-container {
-        background-color: #f0f8ff; /* Azul muy claro */
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #f4f4f4; /* Fondo gris claro */
         padding: 20px;
         border-radius: 10px;
-        text-align: center;
-        margin-top: 20px;
-}
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    }
+    .image-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image-container img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    .text-container {
+        flex: 2;
+        padding-left: 20px;
+    }
+    .text-container h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333333; /* Texto oscuro */
+        margin-bottom: 10px;
+    }
+    .text-container p {
+        font-size: 16px;
+        color: #666666; /* Texto gris */
+        margin-bottom: 20px;
+    }
+     .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #000000; /* Texto negro */
+        background-color: transparent;
+        border: 2px solid #af872f; /* Borde dorado */
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .button:hover {
+        background-color: #af872f; /* Fondo dorado */
+        color: #ffffff; /* Texto blanco */
+    }
+
     </style>
     """,
     unsafe_allow_html=True,
@@ -230,8 +273,15 @@ with col2:
 
 
 # Título de la aplicación
-st.write("Modelos de carros que han usado nuestro servicio")
-
+#st.write("Modelos de carros que han usado nuestro servicio")
+st.markdown(
+    """
+    <div class="title-">
+        <h3 class="main-title">Modelos de carros que han usado nuestro servicio</h1>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 # Rutas de las imágenes
 image_paths = ['bmw.jpg', 'chevro.jpeg', 'ford.png', 'mazda.jpg', 'renault.jpg']
 images = [Image.open(img_path) for img_path in image_paths]
@@ -265,3 +315,24 @@ with col3:
 
 # Mostrar el índice actual en el slider
 st.write(f"Imagen {st.session_state.index + 1} de {len(images)}")
+
+# Contenido HTML
+st.markdown(
+    """
+    <div class="container">
+        <!-- Contenedor de la imagen -->
+        <div class="image-container">
+            <img src="https://www.chevrolet.com.co/content/dam/chevrolet/south-america/colombia/espanol/index/index-subcontent/2024/julio-2024/2024-onstar-home.jpg?imwidth=1200" alt="Imagen" />
+        </div>
+        
+        <!-- Contenedor del texto -->
+        <div class="text-container">
+            <h2>Siempre on para protegerte</h2>
+            <p>Es un servicio exclusivo que te ofrece seguridad y practicidad las 24 horas dentro y fuera de tu Chevrolet. 
+            Cuenta con diagnóstico del vehículo, comandos remotos como abrir y cerrar puertas a distancia y mucho más.</p>
+            <a href="#" class="button">Explora</a>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
