@@ -320,12 +320,8 @@ st.write(f"Imagen {st.session_state.index + 1} de {len(images)}")
 st.markdown(
     """
     <div class="container">
-        <!-- Contenedor de la imagen -->
         <div class="image-container">
-            <img src="https://www.chevrolet.com.co/content/dam/chevrolet/south-america/colombia/espanol/index/index-subcontent/2024/julio-2024/2024-onstar-home.jpg?imwidth=1200" alt="Imagen" />
         </div>
-        
-        <!-- Contenedor del texto -->
         <div class="text-container">
             <h2>Siempre on para protegerte</h2>
             <p>Es un servicio exclusivo que te ofrece seguridad y practicidad las 24 horas dentro y fuera de tu Chevrolet. 
