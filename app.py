@@ -58,7 +58,6 @@ client1= paho.Client("control_juan")
 client1.on_message = on_message
 
 
-
 # Configuración de la página
 st.set_page_config(
     page_title="DETECTRON 2.0",
@@ -72,19 +71,19 @@ st.markdown(
     """
     <style>
         body {
-            background-color: #f5f5f5;
+            background-color: #ffffff; /* Fondo blanco */
         }
         .main-title {
             font-size: 36px;
             font-weight: bold;
             text-align: center;
-            color: #2c3e50;
+            color: #000000; /* Negro */
             margin-bottom: 10px;
         }
         .subheader {
             font-size: 18px;
             text-align: center;
-            color: #34495e;
+            color: #000000; /* Negro */
             margin-bottom: 30px;
         }
         .center {
@@ -95,22 +94,24 @@ st.markdown(
             padding: 10px 20px;
             font-size: 18px;
             font-weight: bold;
-            color: #ffffff;
-            background-color: #1abc9c;
-            border: none;
+            color: #000000; /* Letras negras */
+            background-color: #ffffff; /* Fondo blanco */
+            border: 2px solid #000000; /* Borde negro */
             border-radius: 5px;
             text-decoration: none;
             text-align: center;
             cursor: pointer;
+            transition: background-color 0.3s, color 0.3s; /* Transición suave */
         }
         .custom-button:hover {
-            background-color: #16a085;
+            background-color: #0000FF; /* Azul */
+            color: #ffffff; /* Letras blancas */
         }
         .mqtt-title {
             font-size: 24px;
             font-weight: bold;
             text-align: center;
-            color: #e74c3c;
+            color: #000000; /* Negro */
             margin-top: 40px;
         }
     </style>
