@@ -191,7 +191,12 @@ st.markdown(
         background-color: #af872f; /* Fondo dorado */
         color: #ffffff; /* Texto blanco */
     }
-
+    .tittle-model {
+            background-color: #ababab; 
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -277,7 +282,7 @@ with col2:
 #st.write("Modelos de carros que han usado nuestro servicio")
 st.markdown(
     """
-    <div class="title-">
+    <div class="tittle-model">
         <h3 class="main-title">Modelos de carros que han usado nuestro servicio</h1>
     </div>
     """,
