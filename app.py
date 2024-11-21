@@ -116,7 +116,7 @@ st.markdown(
             color: #000000; /* Negro */
             margin-top: 40px;
         }
-            .stButton > button {
+            .stButton {
             display: inline-block;
             padding: 10px 20px;
             font-size: 18px;
@@ -129,13 +129,13 @@ st.markdown(
             text-align: center;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
-    }
-    .stButton > button:hover {
+        }
+            .stButton:hover {
             background-color: #cacdf8; /* Azul */
             color: #ffffff; /* Letras blancas */
-    }
-    /* Contenedor para el título */
-        .title-container {
+        }
+            /* Contenedor para el título */
+            .title-container {
             background-color: #cacdf8; /* Azul claro */
             padding: 20px;
             border-radius: 10px;
