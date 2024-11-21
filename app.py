@@ -59,21 +59,86 @@ client1.on_message = on_message
 
 
 
-st.title("🏎🏎 DETECTRON 2.0 🏎🏎")
-st.subheader("Control de voz del sensor")
+# Configuración de la página
+st.set_page_config(
+    page_title="DETECTRON 2.0",
+    page_icon="🏎",
+    layout="centered",
+    initial_sidebar_state="collapsed",
+)
 
-image = Image.open('melo.png')
+# Estilos CSS personalizados
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .main-title {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .subheader {
+            font-size: 18px;
+            text-align: center;
+            color: #34495e;
+            margin-bottom: 30px;
+        }
+        .center {
+            text-align: center;
+        }
+        .custom-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #1abc9c;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+        .custom-button:hover {
+            background-color: #16a085;
+        }
+        .mqtt-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #e74c3c;
+            margin-top: 40px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
-st.image(image, width= 400)
+# Encabezado principal
+st.markdown('<h1 class="main-title">🏎🏎 DETECTRON 2.0 🏎🏎</h1>', unsafe_allow_html=True)
+st.markdown('<p class="subheader">Control de voz del sensor</p>', unsafe_allow_html=True)
 
+# Mostrar imagen
+image = Image.open('melo.png')  # Asegúrate de que el archivo 'melo.png' esté en el directorio
+st.image(image, width=400, use_column_width=False, caption="")
 
+# Texto y botón
+st.markdown(
+    """
+    <div class="center">
+        <p>Toca el botón para encender el sensor de reversa</p>
+        <a href="https://crutrv5uanw72zk6druncx.streamlit.app/" class="custom-button">Ir al control de voz</a>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
-
-st.write("Toca el Botón para encender el sensor de reversa ")
-
-st.link_button("Ir al control de voz", "https://crutrv5uanw72zk6druncx.streamlit.app/")
-
-st.title("Receptor MQTT")
+# Título para MQTT
+st.markdown('<h2 class="mqtt-title">Receptor MQTT</h2>', unsafe_allow_html=True)
 
 if st.button("Recibir"):
     with st.spinner('Esperando mensaje...'):
