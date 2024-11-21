@@ -270,8 +270,7 @@ col1, col2 = st.columns([1, 2])  # La imagen ocupa 1/3 del ancho, el texto 2/3
 
 with col1:# Texto en la segunda columna
         st.markdown('<h2 class="mqtt-title">Receptor MQTT</h2>', unsafe_allow_html=True)
-    st.markdown(
-        '<p class="mqtt-description">Este sistema recibe mensajes a través del protocolo MQTT, permitiendo comunicación rápida y segura para dispositivos IoT. Un receptor MQTT es un componente clave en sistemas IoT que utiliza el protocolo Message Queuing Telemetry Transport (MQTT). Este protocolo es ligero y eficiente, ideal para redes con recursos limitados o conexiones inestables, como dispositivos IoT o sensores en tiempo real. El receptor actúa como un cliente MQTT, suscribiéndose a temas específicos (topics) en un broker MQTT</p>',
+        st.markdown('<p class="mqtt-description">Este sistema recibe mensajes a través del protocolo MQTT, permitiendo comunicación rápida y segura para dispositivos IoT. Un receptor MQTT es un componente clave en sistemas IoT que utiliza el protocolo Message Queuing Telemetry Transport (MQTT). Este protocolo es ligero y eficiente, ideal para redes con recursos limitados o conexiones inestables, como dispositivos IoT o sensores en tiempo real. El receptor actúa como un cliente MQTT, suscribiéndose a temas específicos (topics) en un broker MQTT</p>',
         unsafe_allow_html=True,
     )
      
