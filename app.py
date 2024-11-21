@@ -32,7 +32,8 @@ st.title("Microfono detectron")
 image = Image.open("activar.png")
 
 st.image(image, width=400)
-st.subheader("Con el comando Open. enciendes el sistema, Close. apaga el sistema")
+st.subheader("- Con el comando Open. enciendes el sistema")
+st.subheader("- Con el comando Close. apaga el sistema")
 
 st.write("Toca el Botón y habla")
 
