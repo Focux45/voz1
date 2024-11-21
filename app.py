@@ -290,7 +290,9 @@ with col2:
 st.markdown(
     """
     <div class="tittle-model">
-        <h3 class="main-title">Modelos de carros que han usado nuestro servicio</h1>
+        <h3 class="main-title">Modelos de carros que han usado nuestro servicio</h3>
+         <p class="subheader">Los servicios de carros han sido esenciales para garantizar el rendimiento y la seguridad de vehículos de diversas marcas reconocidas. Chevrolet, con modelos icónicos como el Chevrolet Spark y el Camaro, ofrece opciones que van desde compactos económicos hasta deportivos de alto rendimiento. Mazda destaca con su tecnología Skyactiv y diseños modernos, visibles en modelos como el Mazda 3 y el CX-5, ideales para quienes buscan eficiencia y estilo. Ford, por su parte, ha sido líder con modelos como el Mustang y la F-150, combinando potencia y durabilidad. BMW, símbolo de lujo y alto desempeño, es conocido por su Serie 3 y la línea X de SUV, que brindan una experiencia de conducción premium. Renault, con modelos como el Renault Sandero y el Duster, ofrece vehículos confiables y accesibles, populares en diversos mercados. Estas marcas han encontrado en el servicio de mantenimiento una herramienta clave para satisfacer las necesidades de los conductores y prolongar la vida útil de sus automóviles.
+</p>
     </div>
     """,
     unsafe_allow_html=True,
