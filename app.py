@@ -271,7 +271,7 @@ st.markdown(
 
 # Obtener la ruta de la imagen
 current_dir=os.path.dirname(os.path.abspath(__file__))
-image_path=os.path.join(current_dir,"vinoculares.png")
+image_path=os.path.join(current_dir,"carrito.jpg")
 
 # Crear columnas para dividir la imagen y el texto
 col1, col2 = st.columns([1, 2])  # La imagen ocupa 1/3 del ancho, el texto 2/3
