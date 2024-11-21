@@ -321,6 +321,7 @@ st.markdown(
     """
     <div class="container">
         <div class="image-container">
+        <img src="mazda"/>
         </div>
         <div class="text-container">
             <h2>Siempre on para protegerte</h2>
