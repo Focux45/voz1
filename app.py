@@ -204,7 +204,7 @@ st.markdown(
                 color: #ffffff; /* Texto blanco */
             }
             .tittle-model {
-                background-color: #ababab; 
+                background-color: #cacdf8; 
                 padding: 20px;
                 font-size: 18px;
                 border-radius: 10px;
@@ -219,6 +219,12 @@ st.markdown(
             .tittle-model p {
             font-size: 16px;
             }
+            .column-container {
+        background-color: #d9f1ff; /* Fondo azul claro */
+        padding: 20px; /* Espaciado interno */
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -272,10 +278,20 @@ col1, col2 = st.columns([1, 2])  # La imagen ocupa 1/3 del ancho, el texto 2/3
 
 
 with col1:# Texto en la segunda columna
-        st.markdown('<h2 class="mqtt-title">Receptor MQTT</h2>', unsafe_allow_html=True)
-        st.markdown('<p class="mqtt-description">Este sistema recibe mensajes a través del protocolo MQTT, permitiendo comunicación rápida y segura para dispositivos IoT. Un receptor MQTT es un componente clave en sistemas IoT que utiliza el protocolo Message Queuing Telemetry Transport (MQTT). Este protocolo es ligero y eficiente, ideal para redes con recursos limitados o conexiones inestables, como dispositivos IoT o sensores en tiempo real.</p>',
+st.markdown(
+        """
+        <div class="column-container">
+            <h2 class="mqtt-title">Receptor MQTT</h2>
+            <p class="mqtt-description">
+                Este sistema recibe mensajes a través del protocolo MQTT, permitiendo comunicación rápida y segura para dispositivos IoT. 
+                Un receptor MQTT es un componente clave en sistemas IoT que utiliza el protocolo Message Queuing Telemetry Transport (MQTT). 
+                Este protocolo es ligero y eficiente, ideal para redes con recursos limitados o conexiones inestables, como dispositivos IoT o sensores en tiempo real.
+            </p>
+        </div>
+        """,
         unsafe_allow_html=True,
     )
+
      
 
 # Imagen en la primera columna
