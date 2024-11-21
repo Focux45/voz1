@@ -267,17 +267,18 @@ image_path=os.path.join(current_dir,"vinoculares.png")
 # Crear columnas para dividir la imagen y el texto
 col1, col2 = st.columns([1, 2])  # La imagen ocupa 1/3 del ancho, el texto 2/3
 
-# Imagen en la primera columna
-with col1:
-    st.image(image_path)  # Muestra la imagen
 
-# Texto en la segunda columna
-with col2:
-    st.markdown('<h2 class="mqtt-title">Receptor MQTT</h2>', unsafe_allow_html=True)
+with col1:# Texto en la segunda columna
+        st.markdown('<h2 class="mqtt-title">Receptor MQTT</h2>', unsafe_allow_html=True)
     st.markdown(
-        '<p class="mqtt-description">Este sistema recibe mensajes a través del protocolo MQTT, permitiendo comunicación rápida y segura para dispositivos IoT.</p>',
+        '<p class="mqtt-description">Este sistema recibe mensajes a través del protocolo MQTT, permitiendo comunicación rápida y segura para dispositivos IoT. Un receptor MQTT es un componente clave en sistemas IoT que utiliza el protocolo Message Queuing Telemetry Transport (MQTT). Este protocolo es ligero y eficiente, ideal para redes con recursos limitados o conexiones inestables, como dispositivos IoT o sensores en tiempo real. El receptor actúa como un cliente MQTT, suscribiéndose a temas específicos (topics) en un broker MQTT</p>',
         unsafe_allow_html=True,
     )
+     
+
+# Imagen en la primera columna
+with col2:
+ st.image(image_path)# Muestra la imagen
 # Título para MQTT
 #st.markdown('<h2 class="mqtt-title">Receptor MQTT</h2>', unsafe_allow_html=True)
 
