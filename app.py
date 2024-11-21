@@ -106,7 +106,7 @@ st.markdown(
             transition: background-color 0.3s, color 0.3s; /* Transición suave */
         }
         .custom-button:hover {
-            background-color: #0000FF; /* Azul */
+            background-color: #cacdf8; /* Azul */
             color: #ffffff; /* Letras blancas */
         }
         .mqtt-title {
@@ -131,7 +131,7 @@ st.markdown(
             transition: background-color 0.3s, color 0.3s;
     }
     .stButton > button:hover {
-            background-color: #0000FF; /* Azul */
+            background-color: #cacdf8; /* Azul */
             color: #ffffff; /* Letras blancas */
     }
     /* Contenedor para el título */
@@ -182,13 +182,13 @@ st.markdown(
         font-size: 16px;
         color: #000000; /* Texto negro */
         background-color: transparent;
-        border: 2px solid #717afe; /* Borde dorado */
+        border: 2px solid #000000; /* Borde negro */
         border-radius: 5px;
         text-decoration: none;
         transition: all 0.3s ease;
     }
     .button:hover {
-        background-color: #af872f; /* Fondo dorado */
+        background-color: #cacdf8; /* Fondo azul claro */
         color: #ffffff; /* Texto blanco */
     }
     .tittle-model {
@@ -337,7 +337,7 @@ image_path=os.path.join(current_dir,"mazda.jpg")
 img_col, text_col = st.columns([1, 2])  # Usamos nombres diferentes para las columnas
 
 with img_col:
-    st.image(image_path, caption="Mazda Car")  # Mostrar la imagen
+    st.image(image_path, caption="On Car")  # Mostrar la imagen
 
 with text_col:
     st.markdown(
