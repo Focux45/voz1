@@ -244,7 +244,7 @@ st.markdown(
 #st.markdown('<p class="subheader">Control de voz del sensor</p>', unsafe_allow_html=True)
 
 # Mostrar el contenedor de la imagen
-image = Image.open('melo.png')  # Asegúrate de que 'melo.png' esté en el directorio
+image = Image.open('audi.jpg')  # Asegúrate de que 'melo.png' esté en el directorio
 st.image(image, width=400,use_column_width=False, caption="")
 st.markdown(
     """
