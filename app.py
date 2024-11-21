@@ -316,20 +316,26 @@ with col3:
 # Mostrar el índice actual en el slider
 st.write(f"Imagen {st.session_state.index + 1} de {len(images)}")
 
-# Contenido HTML
-st.markdown(
-    """
-    <div class="container">
-        <div class="image-container">
-        <img src="mazda.jpg"/>
-        </div>
+# Obtener la ruta absoluta de la imagen
+current_dir = os.path.dirname(os.path.abspath(_file_))
+image_path = os.path.join(current_dir, "mazda.jpg")
+
+
+# Contenedor con imagen y texto
+img_col, text_col = st.columns([1, 2])  # Usamos nombres diferentes para las columnas
+
+with img_col:
+    st.image(image_path, caption="Mazda Car")  # Mostrar la imagen
+
+with text_col:
+    st.markdown(
+        """
         <div class="text-container">
-            <h2>Siempre on para protegerte</h2>
-            <p>Es un servicio exclusivo que te ofrece seguridad y practicidad las 24 horas dentro y fuera de tu Chevrolet. 
+            <h2>OnStar siempre on para protegerte</h2>
+            <p>OnStar® es un servicio exclusivo que te ofrece seguridad y practicidad las 24 horas dentro y fuera de tu Chevrolet. 
             Cuenta con diagnóstico del vehículo, comandos remotos como abrir y cerrar puertas a distancia y mucho más.</p>
-            <a href="#" class="button">Explora</a>
+            <a href="#" class="button">Explora OnStar</a>
         </div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+        """,
+        unsafe_allow_html=True,
+    )
