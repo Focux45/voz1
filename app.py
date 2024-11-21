@@ -166,10 +166,11 @@ st.markdown(
 
 # Mostrar el contenedor de la imagen
 image = Image.open('melo.png')  # Asegúrate de que 'melo.png' esté en el directorio
+st.image(image, width=400, use_column_width=False, caption="")
 st.markdown(
     """
     <div class="image-container">
-        <img src="melo.png" alt="Imagen" style="width: 100%; max-width: 400px; border-radius: 10px;">
+    
     </div>
     """,
     unsafe_allow_html=True,
