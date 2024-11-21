@@ -132,14 +132,30 @@ st.markdown(
             background-color: #0000FF; /* Azul */
             color: #ffffff; /* Letras blancas */
     }
+    /* Contenedor para el título */
+        .title-container {
+            background-color: #cacdf8; /* Azul claro */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
     </style>
     """,
     unsafe_allow_html=True,
 )
-
+# Encabezado principal dentro de un contenedor
+st.markdown(
+    """
+    <div class="title-container">
+        <h1 class="main-title">🏎🏎 DETECTRON 2.0 🏎🏎</h1>
+        <p class="subheader">Control de voz del sensor</p>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 # Encabezado principal
-st.markdown('<h1 class="main-title">🏎🏎 DETECTRON 2.0 🏎🏎</h1>', unsafe_allow_html=True)
-st.markdown('<p class="subheader">Control de voz del sensor</p>', unsafe_allow_html=True)
+#st.markdown('<h1 class="main-title">🏎🏎 DETECTRON 2.0 🏎🏎</h1>', unsafe_allow_html=True)
+#st.markdown('<p class="subheader">Control de voz del sensor</p>', unsafe_allow_html=True)
 
 # Mostrar imagen
 image = Image.open('melo.png')  # Asegúrate de que el archivo 'melo.png' esté en el directorio
@@ -214,7 +230,7 @@ def prev_image():
         st.session_state.index -= 1
 
 # Botones para navegar entre las imágenes
-col1, col2, col3 = st.columns([1, 6, 1])
+col1, col2, col3 = st.columns([1, 5, 1])
 
 with col1:
     if st.button("Anterior"):
