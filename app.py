@@ -31,9 +31,9 @@ client1.on_message = on_message
 st.title("Microfono detectron")
 st.subheader("Activa el mega sensor")
 
-image = Image.open('voice_ctrl.jpg')
+image = Image.open('activar.png')
 
-st.image(image, width=200)
+st.image(image, width=400)
 
 st.write("Toca el Botón y habla ")
 
