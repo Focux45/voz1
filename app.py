@@ -317,8 +317,8 @@ with col3:
 st.write(f"Imagen {st.session_state.index + 1} de {len(images)}")
 
 # Obtener la ruta absoluta de la imagen
-current_dir = os.path.dirname(os.path.abspath(__file__))
-image_path = os.path.join(current_dir, "mazda.jpg")
+current_dir=os.path.dirname(os.path.abspath(__file__))
+image_path=os.path.join(current_dir,"mazda.jpg")
 
 
 # Contenedor con imagen y texto
