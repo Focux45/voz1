@@ -395,10 +395,11 @@ with text_col:
     st.markdown(
         """
         <div class="text-container">
-            <h2>OnStar siempre on para protegerte</h2>
-            <p>OnStar® es un servicio exclusivo que te ofrece seguridad y practicidad las 24 horas dentro y fuera de tu Chevrolet. 
-            Cuenta con diagnóstico del vehículo, comandos remotos como abrir y cerrar puertas a distancia y mucho más.</p>
-            <a href="#" class="button">Explora OnStar</a>
+            <h2>Detectron siempre para protegerte</h2>
+            <p>Ofrece un sistema de detección de proximidad para las personas que necesitan ayuda 
+            a la hora de parquear el carro, esta interfaz esta pensada para aquellos carros que
+            no tienen sensor o cámara para guiar el parqueo</p>
+            <a href="#" class="button">Explora el sitio web de detectron</a>
         </div>
         """,
         unsafe_allow_html=True,
