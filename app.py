@@ -141,15 +141,16 @@ st.markdown(
             border-radius: 10px;
             margin-bottom: 20px;
         }
-    .container {
+        .container {
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: #f4f4f4; /* Fondo gris claro */
+        background-color: #e0f7fa; /* Azul claro */
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
     }
+
     .image-container {
         flex: 1;
         display: flex;
@@ -181,7 +182,7 @@ st.markdown(
         font-size: 16px;
         color: #000000; /* Texto negro */
         background-color: transparent;
-        border: 2px solid #af872f; /* Borde dorado */
+        border: 2px solid #717afe; /* Borde dorado */
         border-radius: 5px;
         text-decoration: none;
         transition: all 0.3s ease;
