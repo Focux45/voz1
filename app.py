@@ -114,6 +114,17 @@ st.markdown(
             color: #000000; /* Negro */
             margin-top: 40px;
         }
+            .stButton > button {
+        background-color: blue;
+        color: white;
+        border: None;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .stButton > button:hover {
+        background-color: darkblue;
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -175,14 +186,14 @@ with col2:
 
 
 
-
+# Título de la aplicación
 st.write("Modelos de carros que han usado nuestro servicio")
 
-
+# Rutas de las imágenes
 image_paths = ['bmw.jpg', 'chevro.jpeg', 'ford.png', 'mazda.jpg', 'renault.jpg']
 images = [Image.open(img_path) for img_path in image_paths]
 
-# Establecer el índice inicial
+# Establecer el índice inicial en la sesión
 if 'index' not in st.session_state:
     st.session_state.index = 0
 
@@ -197,11 +208,17 @@ def prev_image():
 
 # Botones para navegar entre las imágenes
 col1, col2, col3 = st.columns([1, 6, 1])
+
 with col1:
     if st.button("Anterior"):
         prev_image()
+
 with col2:
     st.image(images[st.session_state.index], caption=f"Imagen {st.session_state.index + 1}", use_column_width=True)
+
 with col3:
     if st.button("Siguiente"):
         next_image()
+
+# Mostrar el índice actual en el slider
+st.write(f"Imagen {st.session_state.index + 1} de {len(images)}")
