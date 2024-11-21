@@ -192,10 +192,16 @@ st.markdown(
         color: #ffffff; /* Texto blanco */
     }
     .tittle-model {
-            background-color: #ababab; 
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+        background-color: #ababab; 
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        width: 100vw; /* Asegura que el ancho sea igual al ancho total de la ventana */
+        margin-left: -50vw; /* Centra el contenedor eliminando el margen del layout de Streamlit */
+        margin-right: -50vw; /* Ajusta el margen derecho */
+        position: relative; /* Permite ajustar el contenedor en relación al layout */
+        left: 50%; /* Centra el contenedor */
+        box-sizing: border-box; /* Incluye el padding dentro del ancho total */
     }
     </style>
     """,
