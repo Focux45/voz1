@@ -216,6 +216,9 @@ st.markdown(
                 left: 50%; /* Centra el contenedor */
                 box-sizing: border-box; /* Incluye el padding dentro del ancho total */
             }
+            .tittle-model p {
+            font-size: 16px;
+            }
     </style>
     """,
     unsafe_allow_html=True,
@@ -270,7 +273,7 @@ col1, col2 = st.columns([1, 2])  # La imagen ocupa 1/3 del ancho, el texto 2/3
 
 with col1:# Texto en la segunda columna
         st.markdown('<h2 class="mqtt-title">Receptor MQTT</h2>', unsafe_allow_html=True)
-        st.markdown('<p class="mqtt-description">Este sistema recibe mensajes a través del protocolo MQTT, permitiendo comunicación rápida y segura para dispositivos IoT. Un receptor MQTT es un componente clave en sistemas IoT que utiliza el protocolo Message Queuing Telemetry Transport (MQTT). Este protocolo es ligero y eficiente, ideal para redes con recursos limitados o conexiones inestables, como dispositivos IoT o sensores en tiempo real. El receptor actúa como un cliente MQTT, suscribiéndose a temas específicos (topics) en un broker MQTT</p>',
+        st.markdown('<p class="mqtt-description">Este sistema recibe mensajes a través del protocolo MQTT, permitiendo comunicación rápida y segura para dispositivos IoT. Un receptor MQTT es un componente clave en sistemas IoT que utiliza el protocolo Message Queuing Telemetry Transport (MQTT). Este protocolo es ligero y eficiente, ideal para redes con recursos limitados o conexiones inestables, como dispositivos IoT o sensores en tiempo real.</p>',
         unsafe_allow_html=True,
     )
      
@@ -321,7 +324,7 @@ st.markdown(
     """
     <div class="tittle-model">
         <h3 class="main-title">Modelos de carros que han usado nuestro servicio</h3>
-         <p class="subheader">Los servicios de carros han sido esenciales para garantizar el rendimiento y la seguridad de vehículos de diversas marcas reconocidas. Chevrolet, con modelos icónicos como el Chevrolet Spark y el Camaro, ofrece opciones que van desde compactos económicos hasta deportivos de alto rendimiento. Mazda destaca con su tecnología Skyactiv y diseños modernos, visibles en modelos como el Mazda 3 y el CX-5, ideales para quienes buscan eficiencia y estilo. Ford, por su parte, ha sido líder con modelos como el Mustang y la F-150, combinando potencia y durabilidad. BMW, símbolo de lujo y alto desempeño, es conocido por su Serie 3 y la línea X de SUV, que brindan una experiencia de conducción premium. Renault, con modelos como el Renault Sandero y el Duster, ofrece vehículos confiables y accesibles, populares en diversos mercados. Estas marcas han encontrado en el servicio de mantenimiento una herramienta clave para satisfacer las necesidades de los conductores y prolongar la vida útil de sus automóviles.
+         <p class="subheader">Los servicios de carros han sido esenciales para garantizar el rendimiento y la seguridad de vehículos de diversas marcas reconocidas. Chevrolet, con modelos icónicos como el Chevrolet Spark y el Camaro, ofrece opciones que van desde compactos económicos hasta deportivos de alto rendimiento. Mazda destaca con su tecnología Skyactiv y diseños modernos, visibles en modelos como el Mazda 3 y el CX-5, ideales para quienes buscan eficiencia y estilo. Ford, por su parte, ha sido líder con modelos como el Mustang y la F-150, combinando potencia y durabilidad. BMW, símbolo de lujo y alto desempeño, es conocido por su Serie 3 y la línea X de SUV, que brindan una experiencia de conducción premium.
 </p>
     </div>
     """,
